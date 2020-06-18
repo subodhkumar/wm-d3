@@ -1,8 +1,20 @@
 import npm from 'rollup-plugin-node-resolve';
+import {terser} from 'rollup-plugin-terser';
 export default {
-    entry: `d3.js`,
+    input: `index.js`,
     plugins: [npm({jsnext: true})],
-    moduleId: 'd3',
-    moduleName: 'd3',
-    format:'umd'
+    output:[
+        {
+            file:'d3.js',
+            format:'umd',
+            name:'d3',
+        },
+        {
+            file:'d3.min.js',
+            format:'iife',
+            name:'d3.min',
+            plugins:[terser()]
+        }
+    ]
 }
+

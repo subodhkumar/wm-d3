@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"rollup index.js --file bundle.js --format umd --name 'd3'",
+    "build-rollup": "rollup -c",
+    "build-uglify": "uglifyjs  d3.js -c -m -o d3.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "rollup": "^2.17.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^6.1.0",
     "uglifyjs": "^2.4.11"
   }
 }

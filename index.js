@@ -21,7 +21,7 @@ import { timerFlush } from "d3-timer";
 import { transition } from "d3-transition";
 import { timeFormat } from "d3-time-format";
 import { rgb } from "d3-color";
-import { pie} from 'd3-pie';
+import * as pie from 'd3-pie';
 import {
   interpolate,
   interpolateString,
