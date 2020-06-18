@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"rollup d3.js --file bundle.js --format umd --name 'd3'",
+    "build":"rollup index.js --file bundle.js --format umd --name 'd3'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
